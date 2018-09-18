@@ -3,7 +3,7 @@ Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
          Amanda Stouder, their colleagues and Joshua Bressman.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -58,6 +58,15 @@ def run_test_problem1a():
 
 
 def problem1a(rectangle, square, thickness, window):
+    start = rg.Point(square.center.x,square.center.y)
+    end = rg.Point((rectangle.corner_1.x+rectangle.corner_2.x)/2,rectangle.corner_1.y)
+    line = rg.Line(start,end)
+    line.thickness = thickness
+    line.color = rectangle.outline_color
+    line.attach_to(window)
+    rectangle.attach_to(window)
+    square.attach_to(window)
+    window.render()
     """
     See   problem1a_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -89,7 +98,7 @@ def problem1a(rectangle, square, thickness, window):
       :type window:    rg.RoseWindow
     """
     # --------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # Done: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
 
@@ -123,6 +132,14 @@ def run_test_problem1b():
 
 
 def problem1b(point, win, width, height, color):
+    point = rg.Point(point.x,point.y)
+    point.attach_to(win)
+    corner1 = rg.Point(point.x-(width/2),point.y-(height/2))
+    corner2 = rg.Point(point.x,point.y)
+    ellipse = rg.Ellipse(rg.Point(corner1.x,corner1.y),rg.Point(corner2.x,corner2.y))
+    ellipse.fill_color = color
+    ellipse.attach_to(win)
+    win.render
     """
     See   problem1b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
