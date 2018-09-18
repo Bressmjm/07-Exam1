@@ -52,19 +52,66 @@ def problem3(point, length, delta, window):
     blkline.thickness = 3
     blkline.attach_to(window)
     window.render()
-    for k in range(9):
-        line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/9)*3*k)),rg.Point(initialpoint.x+(60*(k+1)),initialpoint.y+((length/9)*3*k)))
-        magline.color = 'magenta'
-        line.thickness = 3
-        line.attach_to(window)
-        cyline = rg.Line(rg.Point(initialpoint.x, initialpoint.y + ((length / 9) * (3 * k + 1))),rg.Point(initialpoint.x + (60 * (k + 2)), initialpoint.y + ((length / 9) * (3 * k + 1))))
-        cyline.color = 'cyan'
-        cyline.thickness = 3
-        cyline.attach_to(window)
-        sgline = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/9)*(3*k+2))),rg.Point(initialpoint.x+(60*(k+3)),initialpoint.y+((length/9)*(3*k+2))))
-        sgline.color = 'spring green'
-        sgline.thickness = 3
-        sgline.attach_to(window)
+    if length == 200:
+        for k in range(10):
+            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/9)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/9)*k)))
+            if k % 3 == 0:
+                line.color = 'magenta'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 1:
+                line.color = 'cyan'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 2:
+                line.color = 'spring green'
+                line.thickness = 3
+                line.attach_to(window)
+    if length == 100:
+        for k in range(7):
+            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/6)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/6)*k)))
+            if k % 3 == 0:
+                line.color = 'magenta'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 1:
+                line.color = 'cyan'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 2:
+                line.color = 'spring green'
+                line.thickness = 3
+                line.attach_to(window)
+    if length == 90:
+        for k in range(3):
+            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/2)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/2)*k)))
+            if k % 3 == 0:
+                line.color = 'magenta'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 1:
+                line.color = 'cyan'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 2:
+                line.color = 'spring green'
+                line.thickness = 3
+                line.attach_to(window)
+    if length == 80:
+        for k in range(2):
+            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/2)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/2)*k)))
+            if k % 3 == 0:
+                line.color = 'magenta'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 1:
+                line.color = 'cyan'
+                line.thickness = 3
+                line.attach_to(window)
+            if k % 3 == 2:
+                line.color = 'spring green'
+                line.thickness = 3
+                line.attach_to(window)
     window.render()
     """
     See   problem3_picture.pdf   in this project for pictures
