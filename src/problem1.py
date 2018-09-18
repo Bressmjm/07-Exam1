@@ -134,12 +134,12 @@ def run_test_problem1b():
 def problem1b(point, win, width, height, color):
     point = rg.Point(point.x,point.y)
     point.attach_to(win)
-    corner1 = rg.Point(point.x-(width/2),point.y-(height/2))
-    corner2 = rg.Point(point.x,point.y)
+    corner1 = rg.Point(point.x-(width/2),point.y)
+    corner2 = rg.Point(point.x+(width/2),point.y+height)
     ellipse = rg.Ellipse(rg.Point(corner1.x,corner1.y),rg.Point(corner2.x,corner2.y))
     ellipse.fill_color = color
     ellipse.attach_to(win)
-    win.render
+    win.render()
     """
     See   problem1b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -166,7 +166,7 @@ def problem1b(point, win, width, height, color):
       :type color:  str
     """
     # --------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # Done: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
 

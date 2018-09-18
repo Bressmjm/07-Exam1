@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Joshua Bressman.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -284,6 +284,7 @@ def run_test_problem2b():
 
 
 def problem2b(a, b, x):
+    for k in range(b-a+1):
     """
     What comes in:  Positive integers a, b and x, with a <= b.
     What goes out:

@@ -2,8 +2,8 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Joshua Bressman.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -43,6 +43,21 @@ def run_test_problem3():
 
 
 def problem3(point, length, delta, window):
+    initialpoint = rg.Point(point.x,point.y)
+    initialpoint.attach_to(window)
+    window.render()
+    start = rg.Point(initialpoint.x,initialpoint.y)
+    end = rg.Point(initialpoint.x,initialpoint.y+length)
+    blkline = rg.Line(start,end)
+    blkline.thickness = 3
+    blkline.attach_to(window)
+    window.render()
+    for k in range(2):
+        magline = rg.Line(rg.Point(initialpoint.x,initialpoint.y+3*delta*(k+1)),rg.Point(initialpoint.x+3*delta*(k+1),initialpoint.y+3*delta*(k+1)))
+        magline.color = 'magenta'
+        magline.thickness = 3
+        magline.attach_to(window)
+    window.render()
     """
     See   problem3_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
