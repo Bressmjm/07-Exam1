@@ -59,7 +59,7 @@ def run_test_problem1a():
 
 def problem1a(rectangle, square, thickness, window):
     start = rg.Point(square.center.x,square.center.y)
-    end = rg.Point((rectangle.corner_1.x+rectangle.corner_2.x)/2,rectangle.corner_1.y)
+    end = rg.Point((rectangle.corner_1.x+rectangle.corner_2.x)/2,(rectangle.corner_1.y))
     line = rg.Line(start,end)
     line.thickness = thickness
     line.color = rectangle.outline_color
