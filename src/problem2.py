@@ -284,7 +284,13 @@ def run_test_problem2b():
 
 
 def problem2b(a, b, x):
+    total = 0
     for k in range(b-a+1):
+         if (number_of_factors(a+k) >= x):
+             total = total + (a+k)
+    return total
+
+
     """
     What comes in:  Positive integers a, b and x, with a <= b.
     What goes out:
