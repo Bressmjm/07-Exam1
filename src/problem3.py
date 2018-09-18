@@ -52,11 +52,19 @@ def problem3(point, length, delta, window):
     blkline.thickness = 3
     blkline.attach_to(window)
     window.render()
-    for k in range(2):
-        magline = rg.Line(rg.Point(initialpoint.x,initialpoint.y+3*delta*(k+1)),rg.Point(initialpoint.x+3*delta*(k+1),initialpoint.y+3*delta*(k+1)))
+    for k in range(9):
+        line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/9)*3*k)),rg.Point(initialpoint.x+(60*(k+1)),initialpoint.y+((length/9)*3*k)))
         magline.color = 'magenta'
-        magline.thickness = 3
-        magline.attach_to(window)
+        line.thickness = 3
+        line.attach_to(window)
+        cyline = rg.Line(rg.Point(initialpoint.x, initialpoint.y + ((length / 9) * (3 * k + 1))),rg.Point(initialpoint.x + (60 * (k + 2)), initialpoint.y + ((length / 9) * (3 * k + 1))))
+        cyline.color = 'cyan'
+        cyline.thickness = 3
+        cyline.attach_to(window)
+        sgline = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/9)*(3*k+2))),rg.Point(initialpoint.x+(60*(k+3)),initialpoint.y+((length/9)*(3*k+2))))
+        sgline.color = 'spring green'
+        sgline.thickness = 3
+        sgline.attach_to(window)
     window.render()
     """
     See   problem3_picture.pdf   in this project for pictures
