@@ -397,7 +397,7 @@ def run_test_problem2c():
     actual = problem1c(99)
     print_actual_result_of_test(expected, actual, test_results)
 
-    # Test 6:
+    #Test 6:
     expected = 420   # from 101 to 109: 311 + 109 = 420
     print_expected_result_of_test([100], expected, test_results,
                                   format_string)
