@@ -63,9 +63,9 @@ def problem1a(rectangle, square, thickness, window):
     line = rg.Line(start,end)
     line.thickness = thickness
     line.color = rectangle.outline_color
+    square.attach_to(window)
     line.attach_to(window)
     rectangle.attach_to(window)
-    square.attach_to(window)
     window.render()
     """
     See   problem1a_picture.pdf   in this project for pictures

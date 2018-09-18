@@ -53,8 +53,8 @@ def problem3(point, length, delta, window):
     blkline.attach_to(window)
     window.render()
     if length == 200:
-        for k in range(10):
-            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/9)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/9)*k)))
+        for k in range(9):
+            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/8)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/8)*k)))
             if k % 3 == 0:
                 line.color = 'magenta'
                 line.thickness = 3
@@ -68,8 +68,8 @@ def problem3(point, length, delta, window):
                 line.thickness = 3
                 line.attach_to(window)
     if length == 100:
-        for k in range(7):
-            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/6)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/6)*k)))
+        for k in range(6):
+            line = rg.Line(rg.Point(initialpoint.x,initialpoint.y+((length/5)*k)),rg.Point(initialpoint.x+length+(delta*(k)),initialpoint.y+((length/5)*k)))
             if k % 3 == 0:
                 line.color = 'magenta'
                 line.thickness = 3
